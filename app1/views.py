@@ -36,7 +36,8 @@ def fetchdata(request,password="none",db="BH",):
             db=ReglementationPeriodeDB
         elif db=="RL":
             db=ReglementationsDB
-
+        else:
+            db=BornesHorsRueDB
         # userobject=database.objects.all()
         data=list(db.objects.values())
         # serialisedObject=BornesHorsRueAPI(userobject,many=True)
