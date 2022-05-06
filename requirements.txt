@@ -2,3 +2,4 @@ django ==3.2.6
 gunicorn==20.1.0
 django-import-export==2.7.1
 djangorestframework==3.13.1
+django-heroku==0.3.1
