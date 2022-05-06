@@ -22,8 +22,7 @@ class BornesHorsRueDB(models.Model):
     nTarifHoraire       =models.IntegerField()
     nMax                =models.IntegerField()
 
-    def __str__(self):
-        return self.sTerrain
+
 
 
 
