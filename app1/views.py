@@ -21,24 +21,24 @@ def BornesHorsRue(request):
 def fetchdata(request,password="none",db="BH",):
     if password=="keshavjha":
         if   db =="BH":
-            database=BornesHorsRueDB
+            db=BornesHorsRueDB
         elif db=="BS":
-            database=BornesSurRueDB
+            db=BornesSurRueDB
         elif db=="DE":
-            database=DateExportationDB
+            db=DateExportationDB
         elif db=="ER":
-            database=EmplacementReglementationBD
+            db=EmplacementReglementationBD
         elif db=="PR":
-            database=PeriodesDB
+            db=PeriodesDB
         elif db=="PC":
-            database=PlacesDB
+            db=PlacesDB
         elif db=="RP":
-            database=ReglementationPeriodeDB
+            db=ReglementationPeriodeDB
         elif db=="RL":
-            database=ReglementationsDB
+            db=ReglementationsDB
 
         # userobject=database.objects.all()
-        data=list(database.objects.values())
+        data=list(db.objects.values())
         # serialisedObject=BornesHorsRueAPI(userobject,many=True)
 
         # jsonFormat=json.dumps(serialisedObject.data)
