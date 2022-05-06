@@ -72,13 +72,11 @@ class PlacesDB(models.Model):
     sAutreTete	                = models.CharField( max_length=200, blank=True,null=True)
     sNomRue	                    = models.CharField(max_length=250,blank=True,null=True)
     nSupVelo	                = models.IntegerField(blank=True,null=True)
-    sTypeExploitation	        = models.CharField( max_length=200, blank=True)
+    sTypeExploitation	        = models.CharField( max_length=200, blank=True,null=True)
     nTarifHoraire	            = models.IntegerField(null=True)
     sLocalisation	            = models.CharField( max_length=2, blank=True)
     nTarifMax                   = models.CharField( max_length=200, blank=True,null=True,default=None)
 
-    def __str__(self):
-        return self.sNoPlace
 
 
 class ReglementationPeriodeDB(models.Model):
