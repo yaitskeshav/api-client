@@ -1,1 +1,1 @@
-web: gunicorn kbitz.wsgi
+web: gunicorn project_root.wsgi
