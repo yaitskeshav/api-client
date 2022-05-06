@@ -1,1 +1,1 @@
-web: gunicorn project_root.wsgi
+web: gunicorn project_root.wsgi --timeout 30 --keep-alive 5 --log-level debug
