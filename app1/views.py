@@ -18,7 +18,8 @@ def BornesHorsRue(request):
     print("printing type of data ////" , type(data))
     return JsonResponse(data, safe=False)
 
-def fetchdata(request,db="BH"):
+def fetchdata(request,password="none",db="BH",):
+    if password=="keshavjha":
         if   db =="BH":
             database=BornesHorsRueDB
         elif db=="BS":
@@ -45,3 +46,5 @@ def fetchdata(request,db="BH"):
         # return JsonResponse(json.loads(jsonFormat),safe=False)
 
         return JsonResponse(data, safe=False)
+    else:
+        return HttpResponse("You are not authorised")

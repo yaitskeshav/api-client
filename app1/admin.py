@@ -44,9 +44,9 @@ admin.site.register(PeriodesDB,PeriodesDBAdmin)
 
 
 class PlacesDBAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    list_display=['sNoPlace',"nLongitude"]
+    # list_display=['sNoPlace',"nLongitude"]
     # search_fields = ('nNoBorne', 'sTerrain')
-
+    pass
 admin.site.register(PlacesDB,PlacesDBAdmin)
 
 

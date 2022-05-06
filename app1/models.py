@@ -62,7 +62,7 @@ class PeriodesDB(models.Model):
 
 
 class PlacesDB(models.Model):
-    sNoPlace	                = models.CharField( max_length=50,blank=True)
+    sNoPlace	                = models.CharField( max_length=200,blank=True)
     nLongitude	                = models.FloatField(blank=True)
     nLatitude	                = models.FloatField(blank=True)
     nPositionCentreLongitude	= models.FloatField(blank=True)
@@ -70,15 +70,16 @@ class PlacesDB(models.Model):
     sStatut	                    = models.IntegerField(blank=True)
     sGenre	                    = models.CharField( max_length=200,blank=True)
     sType	                    = models.CharField( max_length=200, blank=True)
-    sAutreTete	                = models.CharField( max_length=200, blank=True)
+    sAutreTete	                = models.CharField( max_length=200, blank=True,null=True)
     sNomRue	                    = models.CharField(max_length=250,blank=True)
     nSupVelo	                = models.IntegerField(blank=True)
     sTypeExploitation	        = models.CharField( max_length=200, blank=True)
     nTarifHoraire	            = models.IntegerField()
     sLocalisation	            = models.CharField( max_length=2, blank=True)
-    nTarifMax                   = models.CharField( max_length=200, blank=True)
+    nTarifMax                   = models.CharField( max_length=200, blank=True,null=True,default=None)
 
-
+    def __str__(self):
+        return self.sNoPlace
 
 
 class ReglementationPeriodeDB(models.Model):
