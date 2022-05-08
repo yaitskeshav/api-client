@@ -10,14 +10,15 @@ from app1.serialiser import *
 def home(request):
     return HttpResponse("All Working Fine..")
 
-
+def about(request):
+    return HttpResponse("This API is created By Keshav Jha")
 
 def BornesHorsRue(request):
-
-    data=list(BornesHorsRueDB.objects.values())
-    print("printing type of data ////" , type(data))
-    return JsonResponse(data, safe=False)
-
+    if request.method=='GET':
+        data=list(BornesHorsRueDB.objects.values())
+        print("printing type of data ////" , type(data))
+        return JsonResponse(data, safe=False)
+    return HttpResponse("NOT A REQUEST")
 def fetchdata(request,password="none",db="BH",):
     if password=="keshavjha":
         if   db =="BH":
