@@ -3,11 +3,13 @@ import json
 from django.http import Http404, HttpResponse, JsonResponse
 from django.shortcuts import render
 
+from templates import *
 from app1.models import *
 from app1.serialiser import *
 # Create your views here.
 
 def home(request):
+    return render(request,"index.html")
     return HttpResponse("All Working Fine..")
 
 def about(request):
