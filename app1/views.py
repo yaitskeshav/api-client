@@ -9,7 +9,7 @@ from app1.serialiser import *
 # Create your views here.
 
 def home(request):
-    return render(request,"index.html")
+    # return render(request,"index.html")
     return HttpResponse("All Working Fine..")
 
 def about(request):
