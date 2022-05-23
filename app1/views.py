@@ -16,7 +16,7 @@ def about(request):
 def BornesHorsRue(request):
     if request.method=='GET':
         data=list(BornesHorsRueDB.objects.values())
-        print("printing type of data ////" , type(data))
+        
         return JsonResponse(data, safe=False)
     return HttpResponse("NOT A REQUEST")
 
